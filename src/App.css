@@ -1,0 +1,491 @@
+/* General Body and HTML Styles */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+.patrick-hand-regular {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  font-family: "Patrick Hand", cursive;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dotted-background {
+
+  background-color: #ffffff;
+
+
+  background-image: radial-gradient(circle, #d1d5db 1px, transparent 1px);
+
+  /* Define the spacing of the dots */
+  background-size: 25px 25px;
+}
+
+/* Optional: Add some padding to the section for better spacing */
+.section {
+  padding: 80px 0;
+}
+
+/* Optional: Add some padding to the section for better spacing */
+.section {
+  padding: 80px 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.chewy-regular {
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Navbar Styles */
+.custom-navbar {
+  background: linear-gradient(to right, #3b82f6, #1e3a8a);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 2px solid transparent;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Sections */
+.section {
+  padding: 100px 15px 60px;
+  /* Top padding ensures navbar doesn't overlap */
+  width: 100%;
+  min-height: 100vh;
+  scroll-margin-top: 80px;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-weight: 800;
+  color: black;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-icon {
+  color: #0dfdad;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+  transform: rotate(360deg);
+  color: #0dfdad;
+}
+
+.menu-container {
+  background: #ffffff33;
+  backdrop-filter: blur(10px);
+  padding: 10px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+  color: #343a40 !important;
+  margin: 0 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Blur effect for the background */
+.blur-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Glassmorphic modal body */
+.glass-body {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  color: white;
+}
+
+/* Optional: Glassmorphic header */
+.glass-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Change form fields for glass theme */
+.glass-body .form-control {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+}
+
+.glass-body .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #060607;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: black !important;
+}
+
+.premium-link {
+  background-color: #0D6EFD;
+  color: #343a40 !important;
+  padding: 8px 20px;
+  border-radius: 8px;
+  margin: 0 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.premium-link:hover {
+  background-color: #0D6EFD;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.5);
+  transform: scale(1.05);
+}
+
+.blur-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.3);
+  /* slight dim overlay */
+}
+
+
+.premium-link svg {
+  color: #343a40;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.premium-link:hover svg {
+  transform: scale(1.1);
+}
+
+/* Pill Button Style */
+.pill-button {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: 1.5px solid #0D6EFD;
+  color: #0D6EFD !important;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.pill-button:hover {
+  background: linear-gradient(45deg, #0D6EFD, #1e90ff);
+  color: #fff !important;
+}
+
+/* Section Background Colors */
+#home {
+  background: linear-gradient(135deg, #e6f0fa 0%, #d6e0ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about {
+  background-color: #f5f5f5;
+}
+
+#skills {
+  background-color: #eeeeee;
+}
+
+#projects {
+  background-color: #fcfcfc;
+}
+
+#contact {
+  background-color: white;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.display-3 {
+  color: #343a40;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.text-muted {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.section .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Skills Section */
+.skills-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.skills-category {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.skill-badge {
+  background-color: transparent !important;
+  border: 1.5px solid #0D6EFD;
+  color: #0D6EFD !important;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-badge:hover {
+  background-color: #0D6EFD !important;
+  color: #ffffff !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.3);
+}
+
+.skill-badge svg {
+  color: #0D6EFD;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+.skill-badge:hover svg {
+  color: #ffffff;
+}
+
+/* Projects Section */
+.projects-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.card {
+  background: rgba(160, 158, 158, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.project-card {
+  background-color: transparent !important;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  padding: 2%;
+}
+
+.project-card:hover {
+
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.3);
+}
+
+.project-card .card-body {
+  color: #333;
+}
+
+.project-card:hover .card-body {
+  color: #0c0a0a;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+.icon-trans {
+  transition: transform 0.3s ease;
+}
+
+.icon-trans:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .section {
+    padding: 100px 15px 40px;
+  }
+
+  .display-3 {
+    font-size: 2.5rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+
+  .text-muted {
+    font-size: 0.9rem;
+  }
+
+  .section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-container {
+    padding: 10px 15px;
+  }
+
+  .nav-link,
+  .premium-link {
+    margin: 5px 0;
+  }
+
+  .nav-link::after {
+    bottom: 0;
+  }
+
+  .skills-heading {
+    font-size: 2.5rem;
+  }
+
+  .skills-category {
+    font-size: 1.3rem;
+  }
+
+  .skill-badge {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .skill-badge svg {
+    font-size: 0.9rem;
+    margin-right: 6px;
+  }
+
+  .projects-heading {
+    font-size: 2.5rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .display-3 {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .text-muted {
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .logo-icon {
+    font-size: 1.2rem;
+  }
+
+  .custom-navbar {
+    padding: 10px 0;
+  }
+
+  .skills-heading {
+    font-size: 2rem;
+  }
+
+  .skills-category {
+    font-size: 1.2rem;
+  }
+
+  .skill-badge {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+
+  .skill-badge svg {
+    font-size: 0.85rem;
+    margin-right: 5px;
+  }
+
+  .projects-heading {
+    font-size: 2rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+}
